@@ -1,0 +1,5 @@
+database : dbpos
+
+database Account
+user ; wason2567
+pass ; abcd1234
