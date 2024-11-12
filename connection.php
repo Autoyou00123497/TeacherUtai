@@ -5,6 +5,8 @@ $password = "";
 $dbname = "restaurant";
 
 // Create connection
+
+// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection

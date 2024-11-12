@@ -97,7 +97,7 @@ require_once 'role_check.php';
     </div>
 
     <div class="container-fluid content">
-        <marquee>*** ยินดีตอนรับสู่เว็บไซต์ แผนกวิชาเทคโนโลยีสารสนเทศ วิทยาลัยเทคนิคระยอง ***</marquee>
+        <marquee>*** ยินดีตอนรับสู่เว็บไซต์ แผนกวิชาเทคโนโลยีสารสนเทศ วิทยาลัยเทคนิคระยอง Real01 ***</marquee>
     </div>
 
     <!-- Carousel -->
