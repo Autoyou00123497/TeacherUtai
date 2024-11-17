@@ -114,4 +114,246 @@ button{
 }
 .register p a:hover{
     text-decoration: underline;
+}/* ตั้งค่าพื้นฐานสำหรับหน้า */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* การจัดกล่องฟอร์ม */
+.form-box {
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+}
+
+/* หัวข้อฟอร์ม */
+.form-box h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* รูปแบบ input และ label */
+.inputbox {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.inputbox input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  background: transparent;
+  transition: 0.3s;
+}
+
+.inputbox label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 14px;
+  color: #999;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+/* เอฟเฟกต์เมื่อพิมพ์ใน input */
+.inputbox input:focus,
+.inputbox input:valid {
+  border-color: #007bff;
+}
+
+.inputbox input:focus + label,
+.inputbox input:valid + label {
+  top: -10px;
+  font-size: 12px;
+  color: #007bff;
+}
+
+/* ปุ่ม login */
+button {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* ส่วนลืมรหัสผ่านและจดจำผู้ใช้ */
+.forget {
+  margin: 10px 0 20px;
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forget a {
+  color: #007bff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.forget a:hover {
+  text-decoration: underline;
+}
+
+/* ลิงก์สำหรับลงทะเบียน */
+.register p {
+  margin: 20px 0 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.register a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register a:hover {
+  text-decoration: underline;
+}
+
+/* ตั้งค่าพื้นฐานสำหรับหน้า */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* การจัดกล่องฟอร์ม */
+.form-box {
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+}
+
+/* หัวข้อฟอร์ม */
+.form-box h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* รูปแบบ input และ label */
+.inputbox {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.inputbox input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  background: transparent;
+  transition: 0.3s;
+}
+
+.inputbox label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 14px;
+  color: #999;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+/* เอฟเฟกต์เมื่อพิมพ์ใน input */
+.inputbox input:focus,
+.inputbox input:valid {
+  border-color: #007bff;
+}
+
+.inputbox input:focus + label,
+.inputbox input:valid + label {
+  top: -10px;
+  font-size: 12px;
+  color: #007bff;
+}
+
+/* ปุ่ม login */
+button {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* ส่วนลืมรหัสผ่านและจดจำผู้ใช้ */
+.forget {
+  margin: 10px 0 20px;
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forget a {
+  color: #007bff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.forget a:hover {
+  text-decoration: underline;
+}
+
+/* ลิงก์สำหรับลงทะเบียน */
+.register p {
+  margin: 20px 0 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.register a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register a:hover {
+  text-decoration: underline;
 }
