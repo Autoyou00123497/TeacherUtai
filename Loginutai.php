@@ -14,14 +14,13 @@
         <div class="form-box">
 
         <div class="form-value">
-
+        <form name = "frmLogin" action="chkLogin.php" method="POST">
         <from action ="">
 
         <h2>Login </h2>
         <div class="inputbox">
-        <ion-icon name="lock-closed-outline">   </ion-icon>      
         <ion-icon name="mail-outline">   </ion-icon>      
-            <input type = "text" required>
+            <input type = "text" required name = "Username"id="Username">
             <label for="">User</label>
 
         </div>
@@ -29,9 +28,8 @@
        
 
         <div class="inputbox">
-        <ion-icon name="lock-closed-outline">   </ion-icon>      
         <ion-icon name="mail-outline">   </ion-icon>      
-            <input type = "password" required>
+            <input type = "password" required name = "Password"id="Password">
             <label for="">Password</label>
 
         </div>
@@ -41,7 +39,7 @@
         <label for=""><input type="checkbox" value="">Remember Me <a href="#">Forget password</a></label>
 
         </div>
-        <button type="button">login</button>
+        <button type="Submit">login</button>
         <div class="register">
         <p>Don't have a account <a href="#">Register</a></p>
         </div>
