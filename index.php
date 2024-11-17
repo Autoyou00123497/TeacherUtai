@@ -1,5 +1,5 @@
 <?php
-require_once 'role_check.php';
+//require_once 'role_check.php';
 
 ?>
 <!DOCTYPE html>
