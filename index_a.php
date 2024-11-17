@@ -27,7 +27,7 @@
     </div>
 
     <div class="container-fluid">
-        <?php include("menu.php"); ?>
+        <?php include("menu_a.php"); ?>
     </div>
 
 
