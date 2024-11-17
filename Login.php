@@ -63,9 +63,14 @@
   </style>
 </head>
 <body>
+<link rel="stylesheet" type="" href="login.css">
+
   <div class="login-container">
     <h1>Login</h1>
+
+        <div class="form-value">
     <form action="login.php" method="post">
+      
       <label for="u_id">User ID:</label>
       <input type="text" id="u_id" name="u_id" required>
 
@@ -75,6 +80,10 @@
       <input type="submit" value="Login">
     </form>
 
+
+
+
+    
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $u_id = $_POST["u_id"];
