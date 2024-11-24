@@ -1,10 +1,16 @@
 
 
-<div style = "display: flex; justify-content: flex-end">
+
+
+
+<?php if (isset($u_status)) ?>
+    <?php if ($u_status === 'A'): ?>
+
+      <div style = "display: flex; justify-content: flex-end">
 <button type="button" class="btn btn-success">เพิ่มอาหาร</button>
-</div>
+</div>    <?php elseif ($u_status === 'M'): ?>
 
-
+    <?php endif; ?>
 
 
 
@@ -49,8 +55,17 @@ while($data=mysqli_fetch_array($result)){ ?>
       <th scope="row"><?php echo "<img src='img/" . $data["p_img"] . "' width='150' height='150' style='border-radius: 50%; object-fit: cover;'>"; ?></th>
 
       <td> 
+        
+<?php if (isset($u_status)) ?>
+    <?php if ($u_status === 'A'): ?>
       <button type="button" class="btn btn-warning">แก้ไข</button>
       <button type="button" class="btn btn-danger">ลบ</button>
+      <div style = "display: flex; justify-content: flex-end">
+</div>    <?php elseif ($u_status === 'M'): ?>
+  
+    <?php endif; ?>
+
+ 
       </td>
 
       

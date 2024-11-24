@@ -1,7 +1,12 @@
 <?php
-//require_once 'role_check.php';
+require_once('conn.php');
 
+// ดึงข้อมูลจากฐานข้อมูล
+$sql = "SELECT p_id, p_name, c_name, p_price, p_img FROM tbl_category 
+        RIGHT JOIN tbl_product ON tbl_category.c_id = tbl_product.c_id";
+$result = mysqli_query($con, $sql);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,6 +83,18 @@
         .lightbox.closed {
             display: none;
         }
+
+        #winking-text {
+  animation: blinker 1s linear infinite;
+  font-size: 42px; /* เพิ่มขนาดฟอนต์ตามต้องการ */
+
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0; 
+  }
+}
     </style>
 
     <link rel="stylesheet" href="./css/bootstrap.min.css">
@@ -91,28 +108,57 @@
     <div class="container-fluid content">
         <?php include("banner.php"); ?>
     </div>
-
-    <div class="container-fluid content">
-        <?php include("menu.php"); ?>
+<!-- <center>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <img src="img/Somtam.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title 1</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
     </div>
-
+    
     
 
-    <div class="container-fluid content">
-        <marquee>*** ยินดีตอนรับสู่เว็บไซต์ แผนกวิชาเทคโนโลยีสารสนเทศ วิทยาลัยเทคนิคระยอง ***</marquee>
+</center> -->
+
+
+
+
+<div class="container">
+        <div class="row">
+            <?php while ($data = mysqli_fetch_array($result)) { ?>
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/<?php echo $data['p_img']; ?>" class="card-img-top" alt="<?php echo $data['p_name']; ?>">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $data['p_name']; ?></h5>
+                            <p class="card-text">ประเภท: <?php echo $data['c_name']; ?></p>
+                            <p class="card-text">ราคา: <?php echo $data['p_price']; ?> บาท</p>
+
+
+                            <a href="#" class="btn btn-primary">สั่งซื้อ</a>
+
+                            
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
     </div>
+
+    <script src="./js/bootstrap.bundle.js"></script>
+
+<center>
+<span id="winking-text">*** โปรดล็อคอินเพื่อสั่งอาหารสามารถคลิกด้านล่างได้เลย !!! ***</span> <br><br>
+
+<a href="Login.php" class="btn btn-outline-danger" role="button">Login</a>
+</center>
     
-    <?php if (isset($u_status)) ?>
-    <?php if ($u_status === 'A'): ?>
-        <div class="container-fluid content">
-        <?php include("graph.php"); ?>
-    </div>
-        </li>    <?php elseif ($u_status === 'M'): ?>
-
-            
-        </li>        <?php endif; ?>
-
-
 
     <!-- Carousel -->
     <div id="carouselExampleIndicators" class="carousel slide content">
