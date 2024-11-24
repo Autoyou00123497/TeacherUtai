@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ร้านอาหาร 2024 61111111111</title>
+    <title>ร้านอาหาร 24_11_2024</title>
 
     <style>
         .video-background {
@@ -94,6 +94,10 @@
 
     <div class="container-fluid content">
         <?php include("menu.php"); ?>
+    </div>
+
+    <div class="container-fluid content">
+        <?php include("graph.php"); ?>
     </div>
 
     <div class="container-fluid content">
