@@ -11,72 +11,44 @@
     <title>ร้านอาหาร 24_11_2024</title>
 
     <style>
-        .video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
+        .card {
+            height: 400px; /* กำหนดความสูงคงที่ */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 15px 0;
+        }
+
+        .card-img-top {
             width: 100%;
-            height: 100%;
+            height: 200px;
             object-fit: cover;
-            z-index: -1;
         }
 
-        .content {
-            position: relative;
-            z-index: 1;
-            color: white;
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
         }
 
-        marquee {
-            font-size: 30px;
-            font-weight: 800;
-            color: #FF0000;
-            font-family: TH SarabunPSK;
+        .card-body {
+            flex: 1; /* ยืดขยายตามพื้นที่ที่เหลือ */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        .carousel-item img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            margin: 0 auto;
+        .card-text {
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .card-footer {
+            text-align: center;
         }
 
         body {
-            margin: 0;
             background-color: #EBB;
-        }
-
-        .lightbox {
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(0, 0, 0, .5);
-            z-index: 9999;
-        }
-
-        .toolbarLB {
-            text-align: right;
-            padding: 3px;
-        }
-
-        .closeLB {
-            color: red;
-            cursor: pointer;
-        }
-
-        .lightbox .iframeContainer {
-            vertical-align: middle;
-            background: #CCC;
-            padding: 20px;
-        }
-
-        .lightbox.closed {
-            display: none;
         }
     </style>
 
@@ -112,7 +84,9 @@
             
         </li>        <?php endif; ?>
 
-
+        <div class="container-fluid content">
+        <?php include("card.php"); ?>
+    </div>
 
     <!-- Carousel -->
     <div id="carouselExampleIndicators" class="carousel slide content">

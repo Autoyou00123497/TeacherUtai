@@ -16,85 +16,61 @@ $result = mysqli_query($con, $sql);
     <title>ร้านอาหาร 24_11_2024</title>
 
     <style>
-        .video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
+        .card {
+            height: 400px; /* กำหนดความสูงคงที่ */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 15px 0;
+        }
+
+        .card-img-top {
             width: 100%;
-            height: 100%;
+            height: 200px;
             object-fit: cover;
-            z-index: -1;
         }
 
-        .content {
-            position: relative;
-            z-index: 1;
-            color: white;
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
         }
 
-        marquee {
-            font-size: 30px;
-            font-weight: 800;
-            color: #FF0000;
-            font-family: TH SarabunPSK;
+        .card-body {
+            flex: 1; /* ยืดขยายตามพื้นที่ที่เหลือ */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        .carousel-item img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            margin: 0 auto;
+        .card-text {
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .card-footer {
+            text-align: center;
         }
 
         body {
-            margin: 0;
             background-color: #EBB;
         }
 
-        .lightbox {
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(0, 0, 0, .5);
-            z-index: 9999;
-        }
-
-        .toolbarLB {
-            text-align: right;
-            padding: 3px;
-        }
-
-        .closeLB {
-            color: red;
-            cursor: pointer;
-        }
-
-        .lightbox .iframeContainer {
-            vertical-align: middle;
-            background: #CCC;
-            padding: 20px;
-        }
-
-        .lightbox.closed {
-            display: none;
-        }
-
-        #winking-text {
-  animation: blinker 1s linear infinite;
-  font-size: 42px; /* เพิ่มขนาดฟอนต์ตามต้องการ */
-
-}
-
-@keyframes blinker {
-  50% {
-    opacity: 0; 
+          /* สไตล์สำหรับข้อความกระพริบ */
+  @keyframes wink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
   }
-}
+
+  #winking-text {
+    animation: wink 1s infinite;
+    font-size: 32px; /* เพิ่มขนาดฟอนต์ */
+
+  }
     </style>
 
     <link rel="stylesheet" href="./css/bootstrap.min.css">
@@ -126,7 +102,12 @@ $result = mysqli_query($con, $sql);
 
 </center> -->
 
+<center>
+<span id="winking-text">*** โปรดล็อคอินเพื่อสั่งอาหารสามารถคลิกด้านล่างได้เลย !!! ***</span> <br><br>
 
+<a href="Login.php" class="btn btn-outline-danger" role="button">Login</a>
+</center>
+    
 
 
 <div class="container">
@@ -141,7 +122,7 @@ $result = mysqli_query($con, $sql);
                             <p class="card-text">ราคา: <?php echo $data['p_price']; ?> บาท</p>
 
 
-                            <a href="#" class="btn btn-primary">สั่งซื้อ</a>
+                            <!-- <a href="#" class="btn btn-primary">สั่งซื้อ</a> -->
 
                             
                         </div>
@@ -153,12 +134,7 @@ $result = mysqli_query($con, $sql);
 
     <script src="./js/bootstrap.bundle.js"></script>
 
-<center>
-<span id="winking-text">*** โปรดล็อคอินเพื่อสั่งอาหารสามารถคลิกด้านล่างได้เลย !!! ***</span> <br><br>
 
-<a href="Login.php" class="btn btn-outline-danger" role="button">Login</a>
-</center>
-    
 
     <!-- Carousel -->
     <div id="carouselExampleIndicators" class="carousel slide content">
