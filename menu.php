@@ -25,7 +25,7 @@ require_once 'role_check.php';
 
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -37,17 +37,30 @@ require_once 'role_check.php';
         </li>
         
     
-        <li class="nav-item">
-          <a class="nav-link" href="Food_list.php">รายการอาหารและเครื่องดื่ม</a>
-        </li>
+       
 
         <?php if (isset($u_status)) ?>
     <?php if ($u_status === 'A'): ?>
       <li class="nav-item">
           <a class="nav-link" href="admin-member.php">จัดการข้อมูล</a>
-        </li>    <?php elseif ($u_status === 'M'): ?>
+
+        </li>  
+
+        <li class="nav-item">
+          <a class="nav-link" href="Food_list.php">จัดการรายการอาหารและเครื่องดื่ม</a>
+        </li>
+
+
+        <li class="nav-item">
+          <a class="nav-link" href="order.php">จัดการอาหาร</a>
+
+        </li>  
+
+        
+        
+        <?php elseif ($u_status === 'M'): ?>
           <li class="nav-item">
-          <a class="nav-link" href="Food_list.php">สั่งอาหาร</a>
+          <a class="nav-link" href="order.php">สั่งอาหาร</a>
         </li>        <?php endif; ?>
 
 

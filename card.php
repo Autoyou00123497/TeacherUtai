@@ -22,10 +22,11 @@ $result = mysqli_query($con, $sql);
 
                             <?php if (isset($u_status)): ?>
     <?php if ($u_status === 'A'): ?>
-        <a href="#" class="btn btn-primary">สั่งซื้อแอดมิน</a>
+        <a href="#" class="btn btn-warning">จัดการสินค้าตัวนี้</a>
    
     <?php elseif ($u_status === 'M'): ?>
-            <a href="#" class="btn btn-primary">สั่งซื้อ</a>
+
+            <a href="#" class="btn btn-success">สั่งซื้อ</a>
     <?php endif; ?>
 <?php endif; ?>
 
