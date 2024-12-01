@@ -23,7 +23,7 @@ require_once 'role_check.php';
 
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Navbsar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -69,7 +69,7 @@ require_once 'role_check.php';
         <!-- เพิ่มปุ่มที่จะแสดงข้างๆ ปุ่มค้นหา -->
         <div id="button-container" class="ms-2"></div> <!-- ใช้ ms-2 เพื่อให้มีระยะห่างระหว่างปุ่มค้นหากับปุ่ม -->
 
-        <a href="logout.php" class="btn btn-outline-danger" role="button">Logout</a>
+        <a href="index_noauthen.php" class="btn btn-outline-danger" role="button">Logout</a>
       </form>
     </div>
   </div>
