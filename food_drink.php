@@ -7,7 +7,9 @@
     <?php if ($u_status === 'A'): ?>
 
       <div style = "display: flex; justify-content: flex-end">
-<button type="button" class="btn btn-success">เพิ่มอาหาร</button>
+
+      <a href="admin_form_insert_product.php" class="btn btn-success">เพิ่มอาหาร</a>
+
 </div>    <?php elseif ($u_status === 'M'): ?>
 
     <?php endif; ?>
