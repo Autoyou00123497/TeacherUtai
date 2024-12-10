@@ -24,7 +24,7 @@ if ($result->num_rows > 0) {
 // ดึงข้อมูลหมวดหมู่สินค้า
 $sql = "SELECT c_id, c_name FROM tbl_category";
 $result = $conn->query($sql);
-$rs = $stmt->fetchAll();
+$rs = [];
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $rs[] = $row;
@@ -56,6 +56,11 @@ if ($result->num_rows > 0) {
         <option value="<?= $row['c_id']; ?>"><?= $row['c_name']; ?></option>
     <?php } ?>
 </select>
+
+
+
+
+
             <br>
 
             <!-- จำนวนสินค้า -->

@@ -47,7 +47,7 @@ if (move_uploaded_file($p_img["tmp_name"], $target_file)) {
 $sql = "INSERT INTO tbl_product (p_id, p_name, c_id, p_quantity, p_price, p_img) 
         VALUES (?, ?, ?, ?, ?, ?)";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("ssiids", $next_id, $p_name, $c_id, $p_quantity, $p_price, $img_path);
+$stmt->bind_param("sssids", $next_id, $p_name, $c_id, $p_quantity, $p_price, $img_path);
 
 // บันทึกข้อมูลลงฐานข้อมูล
 if ($stmt->execute()) {
