@@ -83,6 +83,8 @@ if ($result->num_rows > 0) {
 
             <!-- ปุ่มเพิ่มสินค้า -->
             <button type="submit" class="btn btn-success">เพิ่มสินค้า</button>
+            <a href="index.php" class="btn btn-warning btn-lg">กลับหน้าหลัก</a>
+
         </div>
     </form>
 </div>
