@@ -1,6 +1,12 @@
-<div style = "display: flex; justify-content: flex-end">
-<button type="button" class="btn btn-success">เพิ่มข้อมูล Users</button>
+<div style="display: flex; justify-content: flex-end;">
+    <button 
+        onclick="window.location.href='member_insert.php';" 
+        class="btn btn-success"
+    >
+        เพิ่มข้อมูล Users
+    </button>
 </div>
+
 
 
 <table class="table table-striped">

@@ -56,7 +56,10 @@ require_once 'role_check.php';
 
         </li>  
 
-        
+        <li class="nav-item">
+          <a class="nav-link" href="table_form.php">เพิ่มโต๊ะอาหาร</a>
+
+        </li>  
         
         <?php elseif ($u_status === 'M'): ?>
           <li class="nav-item">
