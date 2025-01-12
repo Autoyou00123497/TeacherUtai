@@ -6,7 +6,9 @@
       <div style = "display: flex; justify-content: flex-end">
 
       <a href="admin_form_insert_product.php" class="btn btn-success">เพิ่มอาหาร</a>
+
       <a href="insert_category_form.php" class="btn btn-success">เพิ่มประเภทอาหาร</a>
+      <a href="import_product.php" class="btn btn-success">เพิ่มข้อมูล CSV</a>
 
 
 </div>    <?php elseif ($u_status === 'M'): ?>

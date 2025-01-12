@@ -5,6 +5,13 @@
     >
         เพิ่มข้อมูล Users
     </button>
+
+    <button 
+        onclick="window.location.href='import_member.php';" 
+        class="btn btn-success"
+    >
+        เพิ่มข้อมูล CSV
+    </button>
 </div>
 
 
