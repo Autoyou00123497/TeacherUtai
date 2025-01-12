@@ -1,8 +1,5 @@
 
 
-
-
-
 <?php if (isset($u_status)) ?>
     <?php if ($u_status === 'A'): ?>
 
@@ -59,18 +56,15 @@ while($data=mysqli_fetch_array($result)){ ?>
       <th scope="row"><?php echo "<img src='img/" . $data["p_img"] . "' width='150' height='150' style='border-radius: 50%; object-fit: cover;'>"; ?></th>
 
       <td> 
-        
-<?php if (isset($u_status)) ?>
-    <?php if ($u_status === 'A'): ?>
-      <button type="button" class="btn btn-warning">แก้ไข</button>
-      <button type="button" class="btn btn-danger">ลบ</button>
-      <div style = "display: flex; justify-content: flex-end">
-</div>    <?php elseif ($u_status === 'M'): ?>
-  
-    <?php endif; ?>
+      <?php if (isset($u_status) && $u_status === 'A'): ?>
+    <a href="admin_form_edit_product.php?p_id=<?php echo $data['p_id']; ?>" class="btn btn-warning">แก้ไข</a>
+    <button type="button" class="btn btn-danger">ลบ</button>
+    <div style="display: flex; justify-content: flex-end"></div>
+<?php elseif (isset($u_status) && $u_status === 'M'): ?>
+<?php endif; ?>
 
- 
-      </td>
+</td>
+
 
       
     </tr>
