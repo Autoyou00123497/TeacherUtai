@@ -49,6 +49,24 @@ if ($result->num_rows > 0) {
     echo "Error: User data not found.";
     exit();
 }
+// ตรวจสอบว่ามีการส่งคำค้นหาหรือไม่
+if (isset($_GET['search'])) {
+    $search = $conn->real_escape_string($_GET['search']); // ป้องกัน SQL Injection
+
+    $sql = "SELECT * FROM tbl_product WHERE p_name LIKE '%$search%'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        echo "<h3>ผลลัพธ์การค้นหา:</h3>";
+        echo "<ul>";
+        while($row = $result->fetch_assoc()) {
+            echo "<li>" . htmlspecialchars($row['p_name']) . "</li>";
+        }
+        echo "</ul>";
+    } else {
+        echo "<p>ไม่พบผลลัพธ์ที่ตรงกับ \"" . htmlspecialchars($search) . "\"</p>";
+    }
+}
 
 // ปิดการทำงานของ Prepared Statement และการเชื่อมต่อ
 $stmt->close();
